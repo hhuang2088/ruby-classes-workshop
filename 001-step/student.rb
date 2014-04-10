@@ -15,10 +15,23 @@ class Student
     @major = major
     @date_of_birth = dob
     @enrollments = []
+    @fullName = []
+    @
   end
 
   #TODO: fullName HERE
   #TODO: calculateGPA HERE
+
+  def fullName
+    @fullName  << @first_name
+    @fullName << @last_name
+    @fullName.join(" ")
+  end
+
+  def calculateGPA 
+    @enrollments.each do 
+  end
+
 
   def addEnrollment(course, grade)
     @enrollments << Enrollment.new(course, grade)
@@ -33,6 +46,8 @@ class Enrollment
     @grade = grade
   end
 end
+
+
 
 ####################### DON'T EDIT BELOW THIS LINE! #############################
 
